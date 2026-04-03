@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer utilities {
+  .math-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='6' y='28' font-size='18' font-family='serif' fill='white' fill-opacity='0.04'%3E%CF%80%3C/text%3E%3Ctext x='46' y='60' font-size='15' font-family='serif' fill='white' fill-opacity='0.04'%3E%E2%88%91%3C/text%3E%3Ctext x='10' y='70' font-size='13' font-family='serif' fill='white' fill-opacity='0.04'%3E%E2%88%AB%3C/text%3E%3Ctext x='55' y='22' font-size='14' font-family='serif' fill='white' fill-opacity='0.04'%3E%E2%88%9A%3C/text%3E%3C/svg%3E");
+  }
+
+  .section-label {
+    @apply flex items-center gap-3 mb-4;
+  }
+}
+
+@layer components {
+  .section-label-bar {
+    @apply block w-8 h-px bg-gold-500;
+  }
+  .section-label-text {
+    @apply text-gold-600 text-xs font-semibold tracking-widest uppercase;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border, currentColor);
+  }
+}
