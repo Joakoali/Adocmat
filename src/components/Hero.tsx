@@ -54,15 +54,14 @@ export default function Hero() {
         </div>
 
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-          Asociación Civil de{" "}
-          <span className="text-gold-400">Docentes de Matemática</span>
+          Asociación Civil de{"\u00A0"}
+          <span className="text-gold-400">Docentes de{"\u00A0"}Matemática</span>
           <br />
-          de Facultades de Ciencias Económicas y Afines
+          de Facultades de Ciencias Económicas y{"\u00A0"}Afines
         </h1>
 
         <p className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
-          Promovemos la excelencia académica y la colaboración entre docentes
-          de matemática en la República Argentina.
+          Promovemos la excelencia académica y{"\u00A0"}la colaboración entre docentes de{"\u00A0"}matemática en la República Argentina.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

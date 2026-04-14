@@ -20,5 +20,25 @@ Thumbs.db
 
 # Vercel
 .vercel/
-
 .vercel
+
+# Claude Code
+.claude/
+
+# Superpowers / docs internos
+docs/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+vite.config.ts.timestamp-*
