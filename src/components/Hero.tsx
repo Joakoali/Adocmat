@@ -25,7 +25,7 @@ const MATH_DECORATIONS = (
 
 const STATS = [
   { value: "+40", label: "Años de trayectoria" },
-  { value: "49", label: "Jornadas nacionales" },
+  { value: "XXXIX", label: "Jornadas nacionales" },
   { value: "∞", label: "Compromiso docente" },
 ] as const;
 
@@ -57,12 +57,11 @@ export default function Hero() {
           Asociación Civil de{"\u00A0"}
           <span className="text-gold-400">Docentes de{"\u00A0"}Matemática</span>
           <br />
-          de Facultades de{"\u00A0"}Ciencias Económicas y{"\u00A0"}Afines
+          de Facultades de Ciencias Económicas y{"\u00A0"}Afines
         </h1>
 
         <p className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
-          Promovemos la excelencia académica y la colaboración entre docentes
-          de matemática en la República Argentina.
+          Promovemos la excelencia académica y{"\u00A0"}la colaboración entre docentes de{"\u00A0"}matemática en la República Argentina.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
