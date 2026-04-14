@@ -61,7 +61,8 @@ export default function Hero() {
         </h1>
 
         <p className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
-          Promovemos la excelencia académica y{"\u00A0"}la colaboración entre docentes de{"\u00A0"}matemática en la República Argentina.
+          Promovemos la excelencia académica y{"\u00A0"}la colaboración entre
+          docentes de{"\u00A0"}matemática en la República Argentina.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

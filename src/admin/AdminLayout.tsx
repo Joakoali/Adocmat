@@ -87,7 +87,9 @@ export default function AdminLayout({
             π
           </div>
           <div>
-            <span className="text-white font-semibold text-sm">ADOCMAT Admin</span>
+            <span className="text-white font-semibold text-sm">
+              ADOCMAT Admin
+            </span>
             <span className="text-white/30 text-xs ml-2">Panel de gestion</span>
           </div>
         </div>

@@ -66,8 +66,8 @@ export default function Jornadas() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="section-label">
-          <span className="!bg-gold-500" aria-hidden />
-          <span className="!text-gold-400">Desde 1986</span>
+          <span className="bg-gold-500!" aria-hidden />
+          <span className="text-gold-400!">Desde 1986</span>
         </div>
 
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
@@ -160,7 +160,7 @@ export default function Jornadas() {
                     {jornadasDesc.map((j, i) => (
                       <tr
                         key={j.numero}
-                        className={`border-b border-white/5 hover:bg-white/5 transition-colors ${i % 2 !== 0 ? "bg-white/[0.02]" : ""}`}
+                        className={`border-b border-white/5 hover:bg-white/5 transition-colors ${i % 2 !== 0 ? "bg-white/2" : ""}`}
                       >
                         <td className="px-5 py-2.5 text-gold-400 font-serif font-bold whitespace-nowrap">
                           {j.numero}

@@ -441,7 +441,7 @@ export default function AdminJornadas() {
                   <td className="py-2.5 pr-4 text-muted-foreground">
                     {j.ciudad}
                   </td>
-                  <td className="py-2.5 pr-4 text-muted-foreground max-w-[180px] truncate">
+                  <td className="py-2.5 pr-4 text-muted-foreground max-w-45 truncate">
                     {j.universidad}
                   </td>
                   <td className="py-2.5 pr-4">
