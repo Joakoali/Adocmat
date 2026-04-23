@@ -44,8 +44,8 @@ const CONTACT_FIELDS = [
 ] as const;
 
 const CONTACT_INFO = [
-  { icon: "📧", label: "Email", value: "info@adocmat.org" },
-  { icon: "🌐", label: "Web", value: "adocmat.org" },
+  { icon: "📧", label: "Email", value: "info@adocmat.com" },
+  { icon: "🌐", label: "Web", value: "adocmat.com" },
   { icon: "📍", label: "Pais", value: "Republica Argentina" },
 ] as const;
 
