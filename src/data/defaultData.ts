@@ -406,8 +406,8 @@ const defaultData: SiteData = {
       fecha: "2021",
       ciudad: "Virtual",
       provincia: "",
-      facultad: "FCE – UBA (Virtual)",
-      universidad: "UBA",
+      facultad: "FCE – UNSa (Virtual)",
+      universidad: "UNSa",
       actas: true,
     },
     {
