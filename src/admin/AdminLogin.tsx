@@ -1,50 +1,37 @@
 import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/Button";
-import {
-  createAdminSession,
-  getAdminSessionTtlMinutes,
-} from "@/lib/adminSession";
-
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD ?? "";
-const IS_ADMIN_PASSWORD_CONFIGURED = ADMIN_PASSWORD.trim().length > 0;
+import { supabase } from "@/lib/supabase";
 
 interface AdminLoginProps {
   onLogin: () => void;
 }
 
 export default function AdminLogin({ onLogin }: AdminLoginProps) {
+  const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
+    async (e: React.FormEvent) => {
       e.preventDefault();
+      setLoading(true);
+      setError(null);
 
-      if (!IS_ADMIN_PASSWORD_CONFIGURED) {
-        setError("Falta configurar VITE_ADMIN_PASSWORD en el archivo .env.");
+      const { error: authError } = await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password: pass,
+      });
+
+      if (authError) {
+        setError("Credenciales incorrectas.");
         setPass("");
-        return;
-      }
-
-      if (pass === ADMIN_PASSWORD) {
-        createAdminSession();
-        setError(null);
+        setLoading(false);
+      } else {
         onLogin();
-        return;
       }
-
-      setError("Contrasena incorrecta.");
-      setPass("");
     },
-    [onLogin, pass],
-  );
-
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setPass(e.target.value);
-      if (error) setError(null);
-    },
-    [error],
+    [email, onLogin, pass],
   );
 
   return (
@@ -66,6 +53,25 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
         >
           <div>
             <label
+              htmlFor="email"
+              className="block text-xs font-semibold text-white/40 uppercase tracking-wide mb-2"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="admin@adocmat.org"
+              autoComplete="email"
+              required
+              autoFocus
+              className="w-full bg-white border border-white/15 rounded-xl px-4 py-3 text-black placeholder-black/25 text-sm focus:outline-hidden focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/10 transition-all"
+            />
+          </div>
+          <div>
+            <label
               htmlFor="password"
               className="block text-xs font-semibold text-white/40 uppercase tracking-wide mb-2"
             >
@@ -75,12 +81,14 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
               id="password"
               type="password"
               value={pass}
-              onChange={handleChange}
+              onChange={(e) => {
+                setPass(e.target.value);
+                if (error) setError(null);
+              }}
               placeholder="••••••••"
               autoComplete="current-password"
-              spellCheck={false}
+              required
               aria-invalid={Boolean(error)}
-              autoFocus
               className="w-full bg-white border border-white/15 rounded-xl px-4 py-3 text-black placeholder-black/25 text-sm focus:outline-hidden focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/10 transition-all"
             />
             {error && (
@@ -93,17 +101,12 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
           <Button
             type="submit"
             variant="primary"
-            disabled={!IS_ADMIN_PASSWORD_CONFIGURED}
+            disabled={loading}
             className="w-full justify-center rounded-xl py-3"
           >
-            Ingresar
+            {loading ? "Ingresando..." : "Ingresar"}
           </Button>
         </form>
-
-        <p className="text-center mt-4 text-white/30 text-xs">
-          La sesion expira tras {getAdminSessionTtlMinutes()} minutos de
-          inactividad.
-        </p>
 
         <p className="text-center mt-3">
           <a

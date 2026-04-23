@@ -4,29 +4,21 @@ import {
   useState,
   useCallback,
   useMemo,
+  useEffect,
   type ReactNode,
 } from 'react'
 import type { SiteData, Autoridades, Jornada, ProximaJornada, Noticia } from '@/types'
 import { cloneSiteData, sanitizeSiteData } from '@/lib/siteData'
+import { supabase } from '@/lib/supabase'
 
-const STORAGE_KEY = 'adocmat_data'
+async function loadData(): Promise<SiteData> {
+  const { data, error } = await supabase
+    .from('site_data')
+    .select('data')
+    .single()
 
-function loadData(): SiteData {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return cloneSiteData()
-    return sanitizeSiteData(JSON.parse(raw))
-  } catch {
-    return cloneSiteData()
-  }
-}
-
-function saveData(data: SiteData): void {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
-  } catch {
-    // quota exceeded
-  }
+  if (error || !data) return cloneSiteData()
+  return sanitizeSiteData(data.data as unknown)
 }
 
 interface DataContextValue {
@@ -41,12 +33,21 @@ interface DataContextValue {
 const DataContext = createContext<DataContextValue | null>(null)
 
 export function DataProvider({ children }: { children: ReactNode }) {
-  const [data, setData] = useState<SiteData>(loadData)
+  const [data, setData] = useState<SiteData>(cloneSiteData)
+
+  useEffect(() => {
+    loadData().then(setData)
+  }, [])
 
   const persistUpdater = useCallback((updater: (current: SiteData) => SiteData) => {
     setData(current => {
       const sanitized = sanitizeSiteData(updater(current))
-      saveData(sanitized)
+      supabase
+        .from('site_data')
+        .upsert({ id: 1, data: sanitized, updated_at: new Date().toISOString() })
+        .then(({ error }) => {
+          if (error) console.error('[DataContext] upsert failed:', error)
+        })
       return sanitized
     })
   }, [])
