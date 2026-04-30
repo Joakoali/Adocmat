@@ -14,14 +14,14 @@ interface ContactForm {
   nombre: string;
   email: string;
   mensaje: string;
-  website: string;
+  _trap: string;
 }
 
 const EMPTY_FORM: ContactForm = {
   nombre: "",
   email: "",
   mensaje: "",
-  website: "",
+  _trap: "",
 };
 
 const CONTACT_FIELDS = [
@@ -54,7 +54,7 @@ function normalizeContactForm(form: ContactForm): ContactForm {
     nombre: form.nombre.trim().slice(0, MAX_NAME_LENGTH),
     email: form.email.trim().slice(0, MAX_EMAIL_LENGTH),
     mensaje: form.mensaje.trim().slice(0, MAX_MESSAGE_LENGTH),
-    website: form.website.trim(),
+    _trap: form._trap.trim(),
   };
 }
 
@@ -93,7 +93,7 @@ export default function Contacto() {
         return;
       }
 
-      if (normalized.website) {
+      if (normalized._trap) {
         setStatus({ type: "sent" });
         setForm(EMPTY_FORM);
         return;
@@ -244,12 +244,12 @@ export default function Contacto() {
                 ))}
 
                 <div className="hidden" aria-hidden>
-                  <label htmlFor="website">No completar</label>
+                  <label htmlFor="_trap">No completar</label>
                   <input
-                    id="website"
+                    id="_trap"
                     type="text"
-                    name="website"
-                    value={form.website}
+                    name="_trap"
+                    value={form._trap}
                     onChange={handleChange}
                     tabIndex={-1}
                     autoComplete="off"
