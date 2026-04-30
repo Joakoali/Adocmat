@@ -12,7 +12,7 @@ function formatFecha(iso: string): string {
 
 function NoticiaCard({ noticia }: { noticia: Noticia }) {
   return (
-    <article className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-md transition-shadow">
+    <article className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-md transition-shadow duration-200">
       {noticia.imagen ? (
         <div className="h-44 overflow-hidden">
           <img
