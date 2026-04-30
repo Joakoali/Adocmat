@@ -66,8 +66,8 @@ export default function Jornadas() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="section-label">
-          <span className="bg-gold-500!" aria-hidden />
-          <span className="text-gold-400!">Desde 1986</span>
+          <span className="bg-gold-500" aria-hidden />
+          <span className="text-gold-400">Desde 1986</span>
         </div>
 
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">

@@ -121,7 +121,7 @@ export default function Autoridades() {
           </div>
         </div>
 
-        <div className="bg-navy-900 rounded-3xl p-10 flex flex-col md:flex-row items-center gap-8">
+        <div className="bg-navy-900 rounded-2xl p-10 flex flex-col md:flex-row items-center gap-8">
           <div
             className="size-20 shrink-0 rounded-2xl bg-gold-500/20 border border-gold-500/30 flex items-center justify-center text-4xl"
             role="img"

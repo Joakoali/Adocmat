@@ -199,7 +199,7 @@ export default function Contacto() {
             </ul>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xs border border-border p-8">
+          <div className="bg-white rounded-2xl shadow-xs border border-border p-8">
             {status.type === "sent" ? (
               <div className="text-center py-12">
                 <div className="size-16 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 text-2xl mx-auto mb-4">
