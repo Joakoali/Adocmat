@@ -13,7 +13,7 @@ const NAV_LINKS: NavLink[] = [
   { label: "Noticias", href: "#noticias" },
   { label: "Jornadas", href: "#jornadas" },
   { label: "Autoridades", href: "#autoridades" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Estatuto", href: "/estatuto" },
 ];
 
 export default function Navbar() {
@@ -74,7 +74,7 @@ export default function Navbar() {
           size="md"
           className="hidden md:inline-flex"
         >
-          Asociarse
+          Contacto
         </LinkButton>
 
         <button
