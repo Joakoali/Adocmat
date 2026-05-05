@@ -8,6 +8,7 @@ import Jornadas from "@/components/Jornadas";
 import Autoridades from "@/components/Autoridades";
 import Contacto from "@/components/Contacto";
 import Footer from "@/components/Footer";
+import EstatutoPage from "@/pages/EstatutoPage";
 
 const AdminPanel = lazy(() => import("@/admin/AdminPanel"));
 
@@ -41,6 +42,7 @@ function AdminLoadingFallback() {
 
 export default function App() {
   const isAdminPath = window.location.pathname.startsWith("/admin");
+  const isEstatutoPath = window.location.pathname.startsWith("/estatuto");
 
   return (
     <DataProvider>
@@ -48,6 +50,8 @@ export default function App() {
         <Suspense fallback={<AdminLoadingFallback />}>
           <AdminPanel />
         </Suspense>
+      ) : isEstatutoPath ? (
+        <EstatutoPage />
       ) : (
         <PublicSite />
       )}
