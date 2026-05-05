@@ -140,14 +140,23 @@ export default function Autoridades() {
               la publicación en los anales de las Jornadas.
             </p>
           </div>
-          <LinkButton
-            href="#contacto"
-            variant="goldBorder"
-            size="md"
-            className="shrink-0 whitespace-nowrap"
-          >
-            Consultar →
-          </LinkButton>
+          <div className="flex flex-col gap-3 shrink-0">
+            <LinkButton
+              href="#contacto"
+              variant="goldBorder"
+              size="md"
+              className="whitespace-nowrap"
+            >
+              Consultar →
+            </LinkButton>
+            <a
+              href="/ReglamentoPremio.pdf"
+              download
+              className="inline-flex items-center justify-center gap-2 border border-gold-400/50 text-gold-400 hover:bg-gold-400/10 text-sm font-medium px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap"
+            >
+              Descargar Reglamento ↓
+            </a>
+          </div>
         </div>
       </div>
     </section>
