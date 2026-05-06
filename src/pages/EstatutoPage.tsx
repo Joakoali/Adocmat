@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export default function EstatutoPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
+      <Navbar variant />
       <main>
         <Estatuto />
       </main>

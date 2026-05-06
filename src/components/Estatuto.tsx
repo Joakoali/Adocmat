@@ -19,7 +19,7 @@ export const Estatuto = () => {
           }
         }
       },
-      { rootMargin: "-80px 0px -60% 0px", threshold: 0 }
+      { rootMargin: "-80px 0px -60% 0px", threshold: 0 },
     );
 
     estatuto.titulos.forEach((t) => {
@@ -58,7 +58,7 @@ export const Estatuto = () => {
                       "block text-xs py-1.5 px-2 rounded transition-colors leading-snug",
                       isActive
                         ? "text-gold-500 font-semibold bg-gold-50"
-                        : "text-navy-500 hover:text-navy-800"
+                        : "text-navy-500 hover:text-navy-800",
                     )}
                   >
                     Título {t.numero}
@@ -90,7 +90,6 @@ export const Estatuto = () => {
                         <span className="font-semibold text-navy-950">
                           Artículo {art.numero}º:
                         </span>{" "}
-
                         {typeof art.contenido === "string" ? (
                           art.contenido
                         ) : (
@@ -106,7 +105,13 @@ export const Estatuto = () => {
                                     <span className="text-gold-600 font-medium shrink-0">
                                       {item.split(")")[0]})
                                     </span>
-                                    <span>{item.split(")").slice(1).join(")").trimStart()}</span>
+                                    <span>
+                                      {item
+                                        .split(")")
+                                        .slice(1)
+                                        .join(")")
+                                        .trimStart()}
+                                    </span>
                                   </li>
                                 ))}
                             </ol>

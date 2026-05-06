@@ -6,6 +6,9 @@ interface NavLink {
   label: string;
   href: string;
 }
+interface NavbarProps {
+  variant?: boolean;
+}
 
 const NAV_LINKS: NavLink[] = [
   { label: "Inicio", href: "#inicio" },
@@ -16,7 +19,7 @@ const NAV_LINKS: NavLink[] = [
   { label: "Estatuto", href: "/estatuto" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ variant = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -34,11 +37,21 @@ export default function Navbar() {
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   const toggleMenu = useCallback(() => setMenuOpen((prev) => !prev), []);
 
+  const links = NAV_LINKS.map((link) => {
+    if (variant && link.href.startsWith("#")) {
+      return {
+        ...link,
+        href: `/${link.href}`,
+      };
+    }
+    return link;
+  });
+
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
+        scrolled || variant
           ? "bg-navy-900/95 backdrop-blur-xs shadow-lg py-3"
           : "bg-transparent py-5",
       )}
@@ -57,7 +70,7 @@ export default function Navbar() {
           className="hidden md:flex items-center gap-8"
           aria-label="Navegación principal"
         >
-          {NAV_LINKS.map(({ href, label }) => (
+          {links.map(({ href, label }) => (
             <a
               key={href}
               href={href}
@@ -106,7 +119,7 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="md:hidden bg-navy-900/98 backdrop-blur-xs px-6 py-4 space-y-3 border-t border-white/10 animate-fade-in">
-          {NAV_LINKS.map(({ href, label }) => (
+          {links.map(({ href, label }) => (
             <a
               key={href}
               href={href}
