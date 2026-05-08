@@ -136,7 +136,7 @@ export default function Navbar({ variant = false }: NavbarProps) {
             className="w-full justify-center mt-2"
             onClick={closeMenu}
           >
-            Asociarse
+            Contacto
           </LinkButton>
         </div>
       )}
