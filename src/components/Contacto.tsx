@@ -47,7 +47,8 @@ const CONTACT_INFO = [
   { icon: "📧", label: "Email", value: "info@adocmat.com" },
   { icon: "🌐", label: "Web", value: "adocmat.com" },
   { icon: "📍", label: "Pais", value: "Republica Argentina" },
-] as const;
+  { icon: "📸", label: "Instagram", value: "@adocmat_org", href: "https://www.instagram.com/adocmat_org/" },
+] as const satisfies ReadonlyArray<{ icon: string; label: string; value: string; href?: string }>;
 
 function normalizeContactForm(form: ContactForm): ContactForm {
   return {
@@ -190,9 +191,20 @@ export default function Contacto() {
                     <div className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
                       {item.label}
                     </div>
-                    <div className="text-foreground font-medium text-sm">
-                      {item.value}
-                    </div>
+                    {"href" in item ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-navy-600 hover:text-navy-800 hover:underline transition-colors font-medium text-sm"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <div className="text-foreground font-medium text-sm">
+                        {item.value}
+                      </div>
+                    )}
                   </div>
                 </li>
               ))}
