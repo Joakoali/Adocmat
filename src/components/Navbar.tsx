@@ -19,6 +19,9 @@ const NAV_LINKS: NavLink[] = [
   { label: "Estatuto", href: "/estatuto" },
 ];
 
+const getVariantHref = (href: string, variant: boolean) =>
+  variant && href.startsWith("#") ? `/${href}` : href;
+
 export default function Navbar({ variant = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,15 +40,12 @@ export default function Navbar({ variant = false }: NavbarProps) {
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   const toggleMenu = useCallback(() => setMenuOpen((prev) => !prev), []);
 
-  const links = NAV_LINKS.map((link) => {
-    if (variant && link.href.startsWith("#")) {
-      return {
-        ...link,
-        href: `/${link.href}`,
-      };
-    }
-    return link;
-  });
+  const links = NAV_LINKS.map((link) => ({
+    ...link,
+    href: getVariantHref(link.href, variant),
+  }));
+  const homeHref = getVariantHref("#inicio", variant);
+  const contactHref = getVariantHref("#contacto", variant);
 
   return (
     <header
@@ -57,7 +57,7 @@ export default function Navbar({ variant = false }: NavbarProps) {
       )}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-3 group">
+        <a href={homeHref} className="flex items-center gap-3 group">
           <div className="size-10 rounded-full bg-accent flex items-center justify-center font-serif text-accent-foreground font-bold text-lg shadow-md group-hover:bg-gold-400 transition-colors">
             π
           </div>
@@ -82,7 +82,7 @@ export default function Navbar({ variant = false }: NavbarProps) {
         </nav>
 
         <LinkButton
-          href="#contacto"
+          href={contactHref}
           variant="primary"
           size="md"
           className="hidden md:inline-flex"
@@ -130,7 +130,7 @@ export default function Navbar({ variant = false }: NavbarProps) {
             </a>
           ))}
           <LinkButton
-            href="#contacto"
+            href={contactHref}
             variant="primary"
             size="md"
             className="w-full justify-center mt-2"
