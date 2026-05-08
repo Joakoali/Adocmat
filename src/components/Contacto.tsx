@@ -196,6 +196,7 @@ export default function Contacto() {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`${item.label} de ADOCMAT (abre en nueva pestana)`}
                         className="text-navy-600 hover:text-navy-800 hover:underline transition-colors font-medium text-sm"
                       >
                         {item.value}
