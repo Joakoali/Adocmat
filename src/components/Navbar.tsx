@@ -6,6 +6,9 @@ interface NavLink {
   label: string;
   href: string;
 }
+interface NavbarProps {
+  variant?: boolean;
+}
 
 const NAV_LINKS: NavLink[] = [
   { label: "Inicio", href: "#inicio" },
@@ -13,10 +16,13 @@ const NAV_LINKS: NavLink[] = [
   { label: "Noticias", href: "#noticias" },
   { label: "Jornadas", href: "#jornadas" },
   { label: "Autoridades", href: "#autoridades" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Estatuto", href: "/estatuto" },
 ];
 
-export default function Navbar() {
+const getVariantHref = (href: string, variant: boolean) =>
+  variant && href.startsWith("#") ? `/${href}` : href;
+
+export default function Navbar({ variant = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -34,17 +40,24 @@ export default function Navbar() {
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   const toggleMenu = useCallback(() => setMenuOpen((prev) => !prev), []);
 
+  const links = NAV_LINKS.map((link) => ({
+    ...link,
+    href: getVariantHref(link.href, variant),
+  }));
+  const homeHref = getVariantHref("#inicio", variant);
+  const contactHref = getVariantHref("#contacto", variant);
+
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
+        scrolled || variant
           ? "bg-navy-900/95 backdrop-blur-xs shadow-lg py-3"
           : "bg-transparent py-5",
       )}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-3 group">
+        <a href={homeHref} className="flex items-center gap-3 group">
           <div className="size-10 rounded-full bg-accent flex items-center justify-center font-serif text-accent-foreground font-bold text-lg shadow-md group-hover:bg-gold-400 transition-colors">
             π
           </div>
@@ -57,7 +70,7 @@ export default function Navbar() {
           className="hidden md:flex items-center gap-8"
           aria-label="Navegación principal"
         >
-          {NAV_LINKS.map(({ href, label }) => (
+          {links.map(({ href, label }) => (
             <a
               key={href}
               href={href}
@@ -69,12 +82,12 @@ export default function Navbar() {
         </nav>
 
         <LinkButton
-          href="#contacto"
+          href={contactHref}
           variant="primary"
           size="md"
           className="hidden md:inline-flex"
         >
-          Asociarse
+          Contacto
         </LinkButton>
 
         <button
@@ -106,7 +119,7 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="md:hidden bg-navy-900/98 backdrop-blur-xs px-6 py-4 space-y-3 border-t border-white/10 animate-fade-in">
-          {NAV_LINKS.map(({ href, label }) => (
+          {links.map(({ href, label }) => (
             <a
               key={href}
               href={href}
@@ -117,7 +130,7 @@ export default function Navbar() {
             </a>
           ))}
           <LinkButton
-            href="#contacto"
+            href={contactHref}
             variant="primary"
             size="md"
             className="w-full justify-center mt-2"

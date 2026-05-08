@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { DataProvider } from "@/context/DataContext";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -8,10 +8,20 @@ import Jornadas from "@/components/Jornadas";
 import Autoridades from "@/components/Autoridades";
 import Contacto from "@/components/Contacto";
 import Footer from "@/components/Footer";
+import EstatutoPage from "@/pages/EstatutoPage";
 
 const AdminPanel = lazy(() => import("@/admin/AdminPanel"));
 
 function PublicSite() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const timer = setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -41,6 +51,7 @@ function AdminLoadingFallback() {
 
 export default function App() {
   const isAdminPath = window.location.pathname.startsWith("/admin");
+  const isEstatutoPath = window.location.pathname.startsWith("/estatuto");
 
   return (
     <DataProvider>
@@ -48,6 +59,8 @@ export default function App() {
         <Suspense fallback={<AdminLoadingFallback />}>
           <AdminPanel />
         </Suspense>
+      ) : isEstatutoPath ? (
+        <EstatutoPage />
       ) : (
         <PublicSite />
       )}
