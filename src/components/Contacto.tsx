@@ -169,7 +169,7 @@ export default function Contacto() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
-              Forma parte de{" "}
+              Formá parte de{" "}
               <span className="text-navy-600">nuestra comunidad</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-10 text-lg">
