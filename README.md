@@ -1,13 +1,15 @@
 # ADOCMAT
 
-Landing page institucional de ADOCMAT construida con React, Vite y Tailwind CSS.
+Landing page institucional de ADOCMAT con panel de administración de contenido.
 
-## Requisitos
+## Stack
 
-- Node.js 18+
-- npm
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS
+- EmailJS (formulario de contacto)
 
-## Desarrollo
+## Desarrollo local
 
 ```bash
 npm install
@@ -16,47 +18,36 @@ npm run dev
 
 ## Variables de entorno
 
-Crea un archivo `.env` tomando como base `.env.example`.
+Crear un archivo `.env` en la raíz tomando como base `.env.example`:
 
-Variables usadas por el proyecto:
+```env
+VITE_ADMIN_PASSWORD=
+VITE_EMAILJS_SERVICE_ID=
+VITE_EMAILJS_TEMPLATE_ID=
+VITE_EMAILJS_PUBLIC_KEY=
+```
 
-- `VITE_ADMIN_PASSWORD`
-- `VITE_EMAILJS_SERVICE_ID`
-- `VITE_EMAILJS_TEMPLATE_ID`
-- `VITE_EMAILJS_PUBLIC_KEY`
-
-## Panel admin
+## Panel de administración
 
 Ruta: `/admin`
 
-El panel permite editar:
+Permite gestionar:
 
-- Noticias
-- Autoridades
-- Jornadas
+- **Noticias**
+- **Autoridades**
+- **Jornadas**
 
-Los cambios se guardan en `localStorage` del navegador y pueden exportarse o importarse como JSON.
+Los cambios se guardan en `localStorage` y pueden exportarse/importarse como JSON para hacer backups.
 
-Notas importantes:
-
-- La clave del admin ya no esta hardcodeada en el codigo.
-- La sesion del admin expira automaticamente tras inactividad.
-- La importacion de backups valida y sanea los datos antes de guardarlos.
-- Al ser un panel client-side, no reemplaza una autenticacion real de servidor.
+Detalles de seguridad:
+- La contraseña del admin se lee desde la variable de entorno `VITE_ADMIN_PASSWORD`, no está hardcodeada
+- La sesión expira automáticamente tras inactividad
+- Los backups importados se validan y sanean antes de aplicarse
+- Al ser client-side, no reemplaza una autenticación real de servidor
 
 ## Formulario de contacto
 
-El formulario usa EmailJS con estas variables:
-
-- `VITE_EMAILJS_SERVICE_ID`
-- `VITE_EMAILJS_TEMPLATE_ID`
-- `VITE_EMAILJS_PUBLIC_KEY`
-
-Ademas:
-
-- EmailJS se carga de forma diferida solo al enviar.
-- Hay validacion basica del formulario.
-- Se aplica limitacion simple de frecuencia y honeypot anti-spam.
+Usa EmailJS con carga diferida (se importa solo al enviar). Incluye validación de campos, honeypot anti-spam y cooldown de 30 segundos entre envíos.
 
 ## Build
 
@@ -64,4 +55,4 @@ Ademas:
 npm run build
 ```
 
-La configuracion de `vercel.json` incluye headers de seguridad para despliegue en Vercel.
+El `vercel.json` incluye headers de seguridad para el deploy en Vercel.
