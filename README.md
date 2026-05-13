@@ -7,6 +7,7 @@ Landing page institucional de ADOCMAT con panel de administración de contenido.
 - React 18 + TypeScript
 - Vite
 - Tailwind CSS
+- Supabase (base de datos y persistencia)
 - EmailJS (formulario de contacto)
 
 ## Desarrollo local
@@ -25,6 +26,8 @@ VITE_ADMIN_PASSWORD=
 VITE_EMAILJS_SERVICE_ID=
 VITE_EMAILJS_TEMPLATE_ID=
 VITE_EMAILJS_PUBLIC_KEY=
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
 ```
 
 ## Panel de administración
@@ -37,7 +40,7 @@ Permite gestionar:
 - **Autoridades**
 - **Jornadas**
 
-Los cambios se guardan en `localStorage` y pueden exportarse/importarse como JSON para hacer backups.
+Los cambios se persisten en la base de datos de Supabase.
 
 Detalles de seguridad:
 - La contraseña del admin se lee desde la variable de entorno `VITE_ADMIN_PASSWORD`, no está hardcodeada
