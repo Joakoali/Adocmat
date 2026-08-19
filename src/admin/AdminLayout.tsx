@@ -56,7 +56,7 @@ export default function AdminLayout({
 
       try {
         if (file.size > MAX_IMPORT_FILE_BYTES) {
-          alert("El archivo supera el tamano maximo permitido para importar.");
+          alert("El archivo supera el tamaño máximo permitido para importar.");
           return;
         }
 
@@ -90,7 +90,7 @@ export default function AdminLayout({
             <span className="text-white font-semibold text-sm">
               ADOCMAT Admin
             </span>
-            <span className="text-white/30 text-xs ml-2">Panel de gestion</span>
+            <span className="text-white/30 text-xs ml-2">Panel de gestión</span>
           </div>
         </div>
         <div className="flex items-center gap-4">

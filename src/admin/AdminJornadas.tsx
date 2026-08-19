@@ -95,7 +95,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 transition-all"
+        className="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 transition-colors"
       />
     </div>
   );
@@ -192,7 +192,7 @@ function ProximaEditor() {
           onChange={(e) => set("descripcion", e.target.value)}
           rows={3}
           placeholder="Descripción breve de la jornada..."
-          className="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 resize-none transition-all"
+          className="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 resize-none transition-colors"
         />
       </div>
 
@@ -298,7 +298,7 @@ export default function AdminJornadas() {
               onChange={(e) =>
                 setField("numeroArabigo", parseInt(e.target.value) || 0)
               }
-              className="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 transition-all"
+              className="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 transition-colors"
               placeholder="38"
             />
             {form.numeroArabigo > 0 && (
@@ -398,7 +398,7 @@ export default function AdminJornadas() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Buscar por ciudad, universidad..."
-            className="border border-border rounded-lg px-3 py-1.5 text-xs focus:outline-hidden focus:border-navy-400 w-56 transition-all"
+            className="border border-border rounded-lg px-3 py-1.5 text-xs focus:outline-hidden focus:border-navy-400 w-56 transition-colors"
           />
         </div>
 

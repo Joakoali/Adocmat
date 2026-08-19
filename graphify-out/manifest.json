@@ -1,0 +1,187 @@
+{
+  "package.json": {
+    "mtime": 1776941466.1857672,
+    "ast_hash": "f936f0ff3ea429b7a4f713abd9985f00",
+    "semantic_hash": "f936f0ff3ea429b7a4f713abd9985f00"
+  },
+  "scripts/copy-html.js": {
+    "mtime": 1776764818.1485248,
+    "ast_hash": "06e186c68188d975c51a9c44cbca8201",
+    "semantic_hash": "06e186c68188d975c51a9c44cbca8201"
+  },
+  "skills-lock.json": {
+    "mtime": 1778668547.443056,
+    "ast_hash": "433c43ff916f83742a24d9541256a684",
+    "semantic_hash": "433c43ff916f83742a24d9541256a684"
+  },
+  "src/App.tsx": {
+    "mtime": 1778668547.4440563,
+    "ast_hash": "9a3e8cc2909ab6c1b4b19419243f23aa",
+    "semantic_hash": "9a3e8cc2909ab6c1b4b19419243f23aa"
+  },
+  "src/admin/AdminAutoridades.tsx": {
+    "mtime": 1776764818.164158,
+    "ast_hash": "be3b99c43be78feacbceb1d8950c6636",
+    "semantic_hash": "be3b99c43be78feacbceb1d8950c6636"
+  },
+  "src/admin/AdminJornadas.tsx": {
+    "mtime": 1776764818.164158,
+    "ast_hash": "42987d62c2b7d42a9251b2de2fccecdf",
+    "semantic_hash": "42987d62c2b7d42a9251b2de2fccecdf"
+  },
+  "src/admin/AdminLayout.tsx": {
+    "mtime": 1776764818.164158,
+    "ast_hash": "54d711dfe2e0caace447e586d61f5a28",
+    "semantic_hash": "54d711dfe2e0caace447e586d61f5a28"
+  },
+  "src/admin/AdminLogin.tsx": {
+    "mtime": 1776941466.1893468,
+    "ast_hash": "4c7827e04389b130ffd12ecb088eabd0",
+    "semantic_hash": "4c7827e04389b130ffd12ecb088eabd0"
+  },
+  "src/admin/AdminNoticias.tsx": {
+    "mtime": 1776764818.1693769,
+    "ast_hash": "41ad3afe7014ef5b925e15935a98fdc4",
+    "semantic_hash": "41ad3afe7014ef5b925e15935a98fdc4"
+  },
+  "src/admin/AdminPanel.tsx": {
+    "mtime": 1776941466.190418,
+    "ast_hash": "959ff1dcf5fda9621867dde371a6d573",
+    "semantic_hash": "959ff1dcf5fda9621867dde371a6d573"
+  },
+  "src/components/About.tsx": {
+    "mtime": 1776764818.1693769,
+    "ast_hash": "ca26838e65af79853e050ec01a0651c2",
+    "semantic_hash": "ca26838e65af79853e050ec01a0651c2"
+  },
+  "src/components/Autoridades.tsx": {
+    "mtime": 1778668547.4450567,
+    "ast_hash": "bc074abc752726b03ffae9ca57a8d4aa",
+    "semantic_hash": "bc074abc752726b03ffae9ca57a8d4aa"
+  },
+  "src/components/Contacto.tsx": {
+    "mtime": 1778668547.4450567,
+    "ast_hash": "ba2722f3cd13340d74b269eaba82bac8",
+    "semantic_hash": "ba2722f3cd13340d74b269eaba82bac8"
+  },
+  "src/components/Estatuto.tsx": {
+    "mtime": 1778668547.4460561,
+    "ast_hash": "847680949ea6e3359f123f598f747c1f",
+    "semantic_hash": "847680949ea6e3359f123f598f747c1f"
+  },
+  "src/components/Footer.tsx": {
+    "mtime": 1776764818.180184,
+    "ast_hash": "ff1974a574ea12cfe5c63c1dd05aabc5",
+    "semantic_hash": "ff1974a574ea12cfe5c63c1dd05aabc5"
+  },
+  "src/components/Hero.tsx": {
+    "mtime": 1776764818.180184,
+    "ast_hash": "0f9ba36521a25e69c0bc72b44aaed680",
+    "semantic_hash": "0f9ba36521a25e69c0bc72b44aaed680"
+  },
+  "src/components/Jornadas.tsx": {
+    "mtime": 1777563371.144889,
+    "ast_hash": "4cc10e6ef18934dce2e44e55647f76dc",
+    "semantic_hash": "4cc10e6ef18934dce2e44e55647f76dc"
+  },
+  "src/components/Navbar.tsx": {
+    "mtime": 1778668547.4460561,
+    "ast_hash": "3055b7b4a2caec60e0d49557e97d1de6",
+    "semantic_hash": "3055b7b4a2caec60e0d49557e97d1de6"
+  },
+  "src/components/Noticias.tsx": {
+    "mtime": 1777563371.144889,
+    "ast_hash": "99b4f724168e3669c19575045d918861",
+    "semantic_hash": "99b4f724168e3669c19575045d918861"
+  },
+  "src/components/ui/Badge.tsx": {
+    "mtime": 1776764818.183819,
+    "ast_hash": "46530eff9fef91788f39fb0abcc3f7c5",
+    "semantic_hash": "46530eff9fef91788f39fb0abcc3f7c5"
+  },
+  "src/components/ui/Button.tsx": {
+    "mtime": 1777563371.1543276,
+    "ast_hash": "e2916a61a89b6fbb814871da367c993c",
+    "semantic_hash": "e2916a61a89b6fbb814871da367c993c"
+  },
+  "src/context/DataContext.tsx": {
+    "mtime": 1776941466.190418,
+    "ast_hash": "488ee643aa4df47ce9ccca55bd6c04f6",
+    "semantic_hash": "488ee643aa4df47ce9ccca55bd6c04f6"
+  },
+  "src/data/defaultData.ts": {
+    "mtime": 1776943485.869192,
+    "ast_hash": "56c0fa43c50b319705c194abfd4c1a1d",
+    "semantic_hash": "56c0fa43c50b319705c194abfd4c1a1d"
+  },
+  "src/data/estatuto.ts": {
+    "mtime": 1778668547.4470558,
+    "ast_hash": "e47b7bb9acc5bbe8b0dd0f3fbce72e19",
+    "semantic_hash": "e47b7bb9acc5bbe8b0dd0f3fbce72e19"
+  },
+  "src/lib/siteData.ts": {
+    "mtime": 1776764818.1969452,
+    "ast_hash": "c5d1670e6485d7093131dc2fb1a34039",
+    "semantic_hash": "c5d1670e6485d7093131dc2fb1a34039"
+  },
+  "src/lib/supabase.ts": {
+    "mtime": 1776941466.190418,
+    "ast_hash": "dfe49d18c646359a050cd1479bd1b28c",
+    "semantic_hash": "dfe49d18c646359a050cd1479bd1b28c"
+  },
+  "src/lib/utils.ts": {
+    "mtime": 1776764818.1979454,
+    "ast_hash": "f7661958c02b4285cbce48efc6d51a7f",
+    "semantic_hash": "f7661958c02b4285cbce48efc6d51a7f"
+  },
+  "src/main.tsx": {
+    "mtime": 1776764818.1989458,
+    "ast_hash": "af9a2ae1da76b9c63c38815821e6b36a",
+    "semantic_hash": "af9a2ae1da76b9c63c38815821e6b36a"
+  },
+  "src/pages/EstatutoPage.tsx": {
+    "mtime": 1778668547.4470558,
+    "ast_hash": "594768295bdd255a3e3c4d3a010dcdfa",
+    "semantic_hash": "594768295bdd255a3e3c4d3a010dcdfa"
+  },
+  "src/types/index.ts": {
+    "mtime": 1776764818.2009451,
+    "ast_hash": "668aa6f539d90a1b80a009a8ef0debf9",
+    "semantic_hash": "668aa6f539d90a1b80a009a8ef0debf9"
+  },
+  "src/vite-env.d.ts": {
+    "mtime": 1776941466.1978858,
+    "ast_hash": "84cf86abb822af4559727d3d6c0547fd",
+    "semantic_hash": "84cf86abb822af4559727d3d6c0547fd"
+  },
+  "tailwind.config.js": {
+    "mtime": 1776764818.202944,
+    "ast_hash": "ed1dee3dfe7d98dd0438286c81c04dac",
+    "semantic_hash": "ed1dee3dfe7d98dd0438286c81c04dac"
+  },
+  "tsconfig.app.json": {
+    "mtime": 1776764818.203946,
+    "ast_hash": "b49aa3a48fec003702e633a97b00a7df",
+    "semantic_hash": "b49aa3a48fec003702e633a97b00a7df"
+  },
+  "tsconfig.json": {
+    "mtime": 1776764818.2049468,
+    "ast_hash": "852c3a5df14a4b43ac28e9554ebedf4a",
+    "semantic_hash": "852c3a5df14a4b43ac28e9554ebedf4a"
+  },
+  "tsconfig.node.json": {
+    "mtime": 1776764818.2059486,
+    "ast_hash": "1a57d92c4ca85af3626ea7e667e6754f",
+    "semantic_hash": "1a57d92c4ca85af3626ea7e667e6754f"
+  },
+  "vercel.json": {
+    "mtime": 1776941466.1978858,
+    "ast_hash": "b29a61ab5265429a0bbe6f3531fc5758",
+    "semantic_hash": "b29a61ab5265429a0bbe6f3531fc5758"
+  },
+  "vite.config.ts": {
+    "mtime": 1776764818.2079446,
+    "ast_hash": "83f28f2314be8549a2ea69c47a1edfb9",
+    "semantic_hash": "83f28f2314be8549a2ea69c47a1edfb9"
+  }
+}

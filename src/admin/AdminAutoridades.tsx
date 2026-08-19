@@ -23,7 +23,7 @@ function MiembroRow({
           value={miembro[field]}
           onChange={(e) => onUpdate(field, e.target.value)}
           placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
-          className="border border-border rounded-lg px-3 py-2 text-xs focus:outline-hidden focus:border-navy-400 transition-all"
+          className="border border-border rounded-lg px-3 py-2 text-xs focus:outline-hidden focus:border-navy-400 transition-colors"
         />
       ))}
       <button
@@ -142,7 +142,7 @@ export default function AdminAutoridades() {
             setSaved(false);
           }}
           placeholder="Ej: 2024 - 2026"
-          className="border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 w-full max-w-xs transition-all"
+          className="border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 w-full max-w-xs transition-colors"
         />
       </div>
 

@@ -1,0 +1,395 @@
+{
+  "communities": {
+    "0": [
+      "src_components_about",
+      "src_components_about_about",
+      "src_components_about_hito",
+      "src_components_about_hitos",
+      "src_components_contacto",
+      "src_components_contacto_contact_fields",
+      "src_components_contacto_contactform",
+      "src_components_contacto_contacto",
+      "src_components_contacto_empty_form",
+      "src_components_contacto_isvalidemail",
+      "src_components_contacto_normalizecontactform",
+      "src_components_hero",
+      "src_components_hero_hero",
+      "src_components_hero_stats",
+      "src_components_navbar",
+      "src_components_navbar_getvarianthref",
+      "src_components_navbar_nav_links",
+      "src_components_navbar_navbar",
+      "src_components_navbar_navbarprops",
+      "src_components_navbar_navlink",
+      "src_components_ui_button",
+      "src_components_ui_button_button",
+      "src_components_ui_button_buttonprops",
+      "src_components_ui_button_buttonvariants",
+      "src_components_ui_button_linkbutton",
+      "src_components_ui_button_linkbuttonprops"
+    ],
+    "1": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_es2020",
+      "ref_src",
+      "tsconfig_app",
+      "tsconfig_app_compileroptions",
+      "tsconfig_app_compileroptions_allowimportingtsextensions",
+      "tsconfig_app_compileroptions_isolatedmodules",
+      "tsconfig_app_compileroptions_jsx",
+      "tsconfig_app_compileroptions_lib",
+      "tsconfig_app_compileroptions_module",
+      "tsconfig_app_compileroptions_moduledetection",
+      "tsconfig_app_compileroptions_moduleresolution",
+      "tsconfig_app_compileroptions_noemit",
+      "tsconfig_app_compileroptions_nofallthroughcasesinswitch",
+      "tsconfig_app_compileroptions_nouncheckedsideeffectimports",
+      "tsconfig_app_compileroptions_nounusedlocals",
+      "tsconfig_app_compileroptions_nounusedparameters",
+      "tsconfig_app_compileroptions_paths",
+      "tsconfig_app_compileroptions_skiplibcheck",
+      "tsconfig_app_compileroptions_strict",
+      "tsconfig_app_compileroptions_target",
+      "tsconfig_app_compileroptions_tsbuildinfofile",
+      "tsconfig_app_compileroptions_usedefineforclassfields",
+      "tsconfig_app_include"
+    ],
+    "2": [
+      "src_lib_sitedata",
+      "src_lib_sitedata_cloneautoridades",
+      "src_lib_sitedata_clonejornada",
+      "src_lib_sitedata_clonemiembro",
+      "src_lib_sitedata_clonenoticia",
+      "src_lib_sitedata_cloneproximajornada",
+      "src_lib_sitedata_clonesitedata",
+      "src_lib_sitedata_hasknownsitedatafields",
+      "src_lib_sitedata_hasvisiblecontent",
+      "src_lib_sitedata_isrecord",
+      "src_lib_sitedata_parsesitedatajson",
+      "src_lib_sitedata_sanitizeautoridades",
+      "src_lib_sitedata_sanitizeboolean",
+      "src_lib_sitedata_sanitizeimageurl",
+      "src_lib_sitedata_sanitizeinteger",
+      "src_lib_sitedata_sanitizejornada",
+      "src_lib_sitedata_sanitizejornadas",
+      "src_lib_sitedata_sanitizemiembro",
+      "src_lib_sitedata_sanitizemiembrolist",
+      "src_lib_sitedata_sanitizenoticia",
+      "src_lib_sitedata_sanitizenoticias",
+      "src_lib_sitedata_sanitizeproximajornada",
+      "src_lib_sitedata_sanitizesitedata",
+      "src_lib_sitedata_sanitizetext"
+    ],
+    "3": [
+      "ref_es2023",
+      "ref_vite_config_ts",
+      "tsconfig_node",
+      "tsconfig_node_compileroptions",
+      "tsconfig_node_compileroptions_allowimportingtsextensions",
+      "tsconfig_node_compileroptions_isolatedmodules",
+      "tsconfig_node_compileroptions_lib",
+      "tsconfig_node_compileroptions_module",
+      "tsconfig_node_compileroptions_moduledetection",
+      "tsconfig_node_compileroptions_moduleresolution",
+      "tsconfig_node_compileroptions_noemit",
+      "tsconfig_node_compileroptions_nofallthroughcasesinswitch",
+      "tsconfig_node_compileroptions_nouncheckedsideeffectimports",
+      "tsconfig_node_compileroptions_nounusedlocals",
+      "tsconfig_node_compileroptions_nounusedparameters",
+      "tsconfig_node_compileroptions_skiplibcheck",
+      "tsconfig_node_compileroptions_strict",
+      "tsconfig_node_compileroptions_target",
+      "tsconfig_node_compileroptions_tsbuildinfofile",
+      "tsconfig_node_include"
+    ],
+    "4": [
+      "src_admin_adminautoridades",
+      "src_admin_adminautoridades_adminautoridades",
+      "src_admin_adminautoridades_miembrokey",
+      "src_admin_adminautoridades_miembrorow",
+      "src_admin_adminlayout",
+      "src_admin_adminlayout_adminlayout",
+      "src_admin_adminlayout_adminlayoutprops",
+      "src_admin_adminlayout_tab",
+      "src_admin_adminlayout_tabs",
+      "src_admin_adminlogin",
+      "src_admin_adminlogin_adminlogin",
+      "src_admin_adminlogin_adminloginprops",
+      "src_admin_adminnoticias",
+      "src_admin_adminnoticias_adminnoticias",
+      "src_admin_adminnoticias_editmode",
+      "src_admin_adminnoticias_empty_noticia",
+      "src_admin_adminnoticias_formfield",
+      "src_admin_adminnoticias_formfieldprops",
+      "src_admin_adminpanel",
+      "src_admin_adminpanel_adminpanel"
+    ],
+    "5": [
+      "class_variance_authority",
+      "clsx",
+      "emailjs_browser",
+      "package_dependencies",
+      "package_dependencies_class_variance_authority",
+      "package_dependencies_clsx",
+      "package_dependencies_emailjs_browser",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_supabase_supabase_js",
+      "package_dependencies_tailwind_merge",
+      "react",
+      "react_dom",
+      "supabase_supabase_js",
+      "tailwind_merge"
+    ],
+    "6": [
+      "package_devdependencies",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_vite",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react",
+      "tailwindcss",
+      "tailwindcss_vite",
+      "types_react",
+      "types_react_dom",
+      "typescript",
+      "vite",
+      "vitejs_plugin_react"
+    ],
+    "7": [
+      "src_components_autoridades",
+      "src_components_autoridades_autoridades",
+      "src_components_autoridades_avatarcircle",
+      "src_components_autoridades_cargos_destacados",
+      "src_components_autoridades_getinitial",
+      "src_components_autoridades_miembrocard",
+      "src_components_autoridades_miembrorow",
+      "src_components_jornadas",
+      "src_components_jornadas_jornadacard",
+      "src_components_jornadas_jornadas",
+      "src_components_ui_badge",
+      "src_components_ui_badge_badge",
+      "src_components_ui_badge_badgeprops",
+      "src_components_ui_badge_badgevariants"
+    ],
+    "8": [
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_scripts_typecheck",
+      "package_type",
+      "package_version"
+    ],
+    "9": [
+      "src_admin_adminjornadas",
+      "src_admin_adminjornadas_adminjornadas",
+      "src_admin_adminjornadas_editmode",
+      "src_admin_adminjornadas_empty_jornada",
+      "src_admin_adminjornadas_empty_proxima",
+      "src_admin_adminjornadas_field",
+      "src_admin_adminjornadas_fieldprops",
+      "src_admin_adminjornadas_proximaeditor",
+      "src_admin_adminjornadas_roman"
+    ],
+    "10": [
+      "src_types_index",
+      "src_types_index_admintab",
+      "src_types_index_autoridades",
+      "src_types_index_formstatus",
+      "src_types_index_jornada",
+      "src_types_index_miembro",
+      "src_types_index_noticia",
+      "src_types_index_proximajornada",
+      "src_types_index_sitedata"
+    ],
+    "11": [
+      "src_app",
+      "src_app_adminloadingfallback",
+      "src_app_adminpanel",
+      "src_app_app",
+      "src_app_publicsite",
+      "src_main",
+      "src_main_root"
+    ],
+    "12": [
+      "src_context_datacontext",
+      "src_context_datacontext_datacontext",
+      "src_context_datacontext_datacontextvalue",
+      "src_context_datacontext_dataprovider",
+      "src_context_datacontext_loaddata",
+      "src_context_datacontext_usedata"
+    ],
+    "13": [
+      "vercel",
+      "vercel_buildcommand",
+      "vercel_headers",
+      "vercel_outputdirectory",
+      "vercel_rewrites"
+    ],
+    "14": [
+      "src_components_noticias",
+      "src_components_noticias_formatfecha",
+      "src_components_noticias_noticiacard",
+      "src_components_noticias_noticias"
+    ],
+    "15": [
+      "src_data_estatuto",
+      "src_data_estatuto_articulo",
+      "src_data_estatuto_estatuto",
+      "src_data_estatuto_titulo"
+    ],
+    "16": [
+      "src_lib_supabase",
+      "src_lib_supabase_key",
+      "src_lib_supabase_supabase",
+      "src_lib_supabase_url"
+    ],
+    "17": [
+      "src_components_estatuto",
+      "src_components_estatuto_estatuto",
+      "src_components_estatuto_islistitem"
+    ],
+    "18": [
+      "src_components_footer",
+      "src_components_footer_footer",
+      "src_components_footer_nav_links"
+    ],
+    "19": [
+      "src_vite_env_d",
+      "src_vite_env_d_importmeta",
+      "src_vite_env_d_importmetaenv"
+    ],
+    "20": [
+      "tsconfig",
+      "tsconfig_files",
+      "tsconfig_references"
+    ],
+    "21": [
+      "scripts_copy_html",
+      "scripts_copy_html_html"
+    ],
+    "22": [
+      "src_data_defaultdata",
+      "src_data_defaultdata_defaultdata"
+    ],
+    "23": [
+      "src_lib_utils",
+      "src_lib_utils_cn"
+    ],
+    "24": [
+      "src_pages_estatutopage",
+      "src_pages_estatutopage_estatutopage"
+    ],
+    "25": [
+      "tailwind_config"
+    ],
+    "26": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.10461538461538461,
+    "1": 0.08,
+    "2": 0.2318840579710145,
+    "3": 0.1,
+    "4": 0.10526315789473684,
+    "5": 0.13333333333333333,
+    "6": 0.13333333333333333,
+    "7": 0.1978021978021978,
+    "8": 0.2,
+    "9": 0.2222222222222222,
+    "10": 0.2222222222222222,
+    "11": 0.2857142857142857,
+    "12": 0.4,
+    "13": 0.4,
+    "14": 0.6666666666666666,
+    "15": 0.5,
+    "16": 0.5,
+    "17": 1.0,
+    "18": 0.6666666666666666,
+    "19": 0.6666666666666666,
+    "20": 0.6666666666666666,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_app_compileroptions",
+      "label": "compilerOptions",
+      "degree": 19
+    },
+    {
+      "id": "tsconfig_node_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "src_lib_sitedata_sanitizesitedata",
+      "label": "sanitizeSiteData()",
+      "degree": 8
+    },
+    {
+      "id": "src_components_ui_button_linkbutton",
+      "label": "LinkButton()",
+      "degree": 7
+    },
+    {
+      "id": "src_lib_sitedata_isrecord",
+      "label": "isRecord()",
+      "degree": 7
+    },
+    {
+      "id": "src_lib_sitedata_sanitizetext",
+      "label": "sanitizeText()",
+      "degree": 7
+    },
+    {
+      "id": "src_lib_sitedata_clonesitedata",
+      "label": "cloneSiteData()",
+      "degree": 7
+    },
+    {
+      "id": "src_lib_sitedata_sanitizeautoridades",
+      "label": "sanitizeAutoridades()",
+      "degree": 7
+    },
+    {
+      "id": "src_lib_sitedata_sanitizenoticia",
+      "label": "sanitizeNoticia()",
+      "degree": 7
+    },
+    {
+      "id": "src_lib_sitedata_sanitizejornada",
+      "label": "sanitizeJornada()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "DataProvider()",
+      "target": "cloneSiteData()",
+      "source_files": [
+        "src/context/DataContext.tsx",
+        "src/lib/siteData.ts"
+      ],
+      "confidence": "INFERRED",
+      "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

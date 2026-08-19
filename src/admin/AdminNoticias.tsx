@@ -18,7 +18,7 @@ interface FormFieldProps {
 }
 
 function FormField({ label, name, value, onChange, type = 'text', placeholder, multiline }: FormFieldProps) {
-  const inputClass = "w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 transition-all"
+  const inputClass = "w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-hidden focus:border-navy-400 transition-colors"
   return (
     <div>
       <label htmlFor={name} className="block text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-1">{label}</label>

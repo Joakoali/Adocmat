@@ -17,7 +17,11 @@ function PublicSite() {
     const hash = window.location.hash;
     if (!hash) return;
     const timer = setTimeout(() => {
-      document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+      try {
+        document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+      } catch {
+        // hash fragment is not a valid CSS selector; ignore
+      }
     }, 100);
     return () => clearTimeout(timer);
   }, []);

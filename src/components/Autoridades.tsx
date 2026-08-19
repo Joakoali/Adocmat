@@ -35,7 +35,7 @@ function AvatarCircle({
 
 function MiembroCard({ miembro }: { miembro: Miembro }) {
   return (
-    <div className="group flex flex-col items-center text-center p-6 rounded-2xl border border-border hover:border-navy-200 hover:shadow-lg transition-all duration-200 bg-muted hover:bg-white">
+    <div className="group flex flex-col items-center text-center p-6 rounded-2xl border border-border hover:border-navy-200 hover:shadow-lg transition duration-200 bg-muted hover:bg-white">
       <AvatarCircle nombre={miembro.nombre} size="md" />
       <h3 className="font-semibold text-foreground text-sm mb-0.5 mt-3">
         {miembro.nombre}

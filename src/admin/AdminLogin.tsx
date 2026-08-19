@@ -67,7 +67,7 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
               autoComplete="email"
               required
               autoFocus
-              className="w-full bg-white border border-white/15 rounded-xl px-4 py-3 text-black placeholder-black/25 text-sm focus:outline-hidden focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/10 transition-all"
+              className="w-full bg-white border border-white/15 rounded-xl px-4 py-3 text-black placeholder-black/25 text-sm focus:outline-hidden focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/10 transition-colors"
             />
           </div>
           <div>
@@ -89,7 +89,7 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
               autoComplete="current-password"
               required
               aria-invalid={Boolean(error)}
-              className="w-full bg-white border border-white/15 rounded-xl px-4 py-3 text-black placeholder-black/25 text-sm focus:outline-hidden focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/10 transition-all"
+              className="w-full bg-white border border-white/15 rounded-xl px-4 py-3 text-black placeholder-black/25 text-sm focus:outline-hidden focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/10 transition-colors"
             />
             {error && (
               <p role="alert" className="text-red-400 text-xs mt-2">

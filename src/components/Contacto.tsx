@@ -251,7 +251,7 @@ export default function Contacto() {
                       autoComplete={field.autoComplete}
                       maxLength={field.maxLength}
                       placeholder={field.placeholder}
-                      className="w-full border border-border rounded-xl px-4 py-3 text-foreground placeholder-muted-foreground/50 text-sm focus:outline-hidden focus:border-navy-500 focus:ring-2 focus:ring-navy-500/10 transition-all"
+                      className="w-full border border-border rounded-xl px-4 py-3 text-foreground placeholder-muted-foreground/50 text-sm focus:outline-hidden focus:border-navy-500 focus:ring-2 focus:ring-navy-500/10 transition-colors"
                     />
                   </div>
                 ))}
@@ -285,7 +285,7 @@ export default function Contacto() {
                     rows={5}
                     maxLength={MAX_MESSAGE_LENGTH}
                     placeholder="En que podemos ayudarte?"
-                    className="w-full border border-border rounded-xl px-4 py-3 text-foreground placeholder-muted-foreground/50 text-sm focus:outline-hidden focus:border-navy-500 focus:ring-2 focus:ring-navy-500/10 transition-all resize-none"
+                    className="w-full border border-border rounded-xl px-4 py-3 text-foreground placeholder-muted-foreground/50 text-sm focus:outline-hidden focus:border-navy-500 focus:ring-2 focus:ring-navy-500/10 transition-colors resize-none"
                   />
                 </div>
 
